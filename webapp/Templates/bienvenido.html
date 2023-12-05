@@ -7,7 +7,10 @@
 <body>
 <h1>Bienvenido a Sistema de Administracion de Personas </h1>
 
+    <a href="{ % url 'nuevo' %}">Crear Nueva Persona</a>
 <div> Numero de personas en BD: {{no_personas}}</div>
+
+
 <div>
     <ul>
         {% for  persona in personas %}
@@ -17,6 +20,7 @@
                   {{persona.apellido}}
                   {{persona.email}}
                   <a href="/detalle_persona/{{persona.id}}">Ver Detalle</a>
+
              </li>
         {% endfor %}
     </ul>
@@ -24,3 +28,4 @@
 
 </body>
 </html>
+
